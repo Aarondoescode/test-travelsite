@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Travel Recommender</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css"/>
+  <link rel="stylesheet" href="styles/main.css"/>
+  <!-- Materialize CSS -->
+<link href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css" rel="stylesheet">
+
+<!-- Material Icons (optional) -->
+<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+
+</head>
+<body>
+<div class="container">
+  <h4>Find Your Next Travel Destination</h4>
+  <form id="travel-form" class="card-panel">
+    <div class="input-field">
+      <input type="text" id="budget" required>
+      <label for="budget">Budget (USD)</label>
+    </div>
+
+    <div class="input-field">
+      <select id="weather">
+        <option value="" disabled selected>Choose your preferred weather</option>
+        <option value="sunny">Sunny</option>
+        <option value="cold">Cold</option>
+        <option value="mild">Mild</option>
+      </select>
+      <label for="weather">Weather</label>
+    </div>
+
+    <div class="input-field">
+      <input type="text" id="activities" required>
+      <label for="activities">Activities (comma separated)</label>
+    </div>
+
+    <div class="input-field">
+      <input type="date" id="travel-date" required>
+      <label for="travel-date">Travel Date</label>
+    </div>
+
+    <div class="input-field">
+      <input type="number" id="distance" required>
+      <label for="distance">Max Distance (km)</label>
+    </div>
+
+    <button class="btn waves-effect waves-light" type="submit">Get Recommendations</button>
+  </form>
+
+  <div id="results" class="row"></div>
+</div>
+
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js" defer></script>
+  <script type="module" src="scripts/app.js" defer></script>
+  <!-- jQuery for Materialize (optional but required for some components) -->
+<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+
+<!-- Materialize JS -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+
+<!-- Your JS -->
+<script type="module" src="./main.js"></script>
+
+</body>
+</html>
